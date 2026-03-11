@@ -27,8 +27,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Portfolio",
-    description: "My personal portfolio website built with React and Tailwind CSS.",
+    title: "Quiz",
+    description: "A quiz application designed to help prepare for interviews.",
     tags: ["React", "Tailwind CSS"],
     liveUrl: "https://ayman-shaim1.github.io/quiz",
     githubUrl: "https://github.com/Ayman-shaim1/quiz",
