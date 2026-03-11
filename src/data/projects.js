@@ -25,4 +25,14 @@ export const projects = [
     // playStoreLink: "https://play.google.com/store/apps",
     // appStoreLink: "https://apps.apple.com/app",
   },
+  {
+    id: 3,
+    title: "Portfolio",
+    description: "My personal portfolio website built with React and Tailwind CSS.",
+    tags: ["React", "Tailwind CSS"],
+    liveUrl: "https://ayman-shaim1.github.io/portfolio",
+    githubUrl: "https://github.com/Ayman-shaim1/portfolio",
+    isPrivate: false,
+    video: null,
+  },
 ];
