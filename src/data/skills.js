@@ -16,7 +16,7 @@ export const skills = [
   },
   {
     name: "Java",
-    level: 87,
+    level: 94,
     icon: "DiJava",
   },
   {
