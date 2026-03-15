@@ -20,6 +20,13 @@ jobs:
 
       - run: npm ci
 
+      - name: Check Formspree secret
+        run: |
+          if [ -z "${{ secrets.VITE_FORMSPREE_ID }}" ]; then
+            echo "::error::VITE_FORMSPREE_ID is not set. Add it in Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+
       - run: npm run build
         env:
           VITE_FORMSPREE_ID: ${{ secrets.VITE_FORMSPREE_ID }}
