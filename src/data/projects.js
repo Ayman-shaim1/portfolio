@@ -21,7 +21,8 @@ export const projects = [
     liveUrl: null,
     githubUrl: "https://github.com/Ayman-shaim1/e-bricole",
     isPrivate: false,
-    video: "https://drive.google.com/file/d/187B09sS5C4WXdxsFzq7kxlwPanUhTd9n/view",
+    video:
+      "https://drive.google.com/file/d/1AOmLvvHcnU5xjR582FnrgU9c7UZ5iDMM/view",
     // playStoreLink: "https://play.google.com/store/apps",
     // appStoreLink: "https://apps.apple.com/app",
   },
