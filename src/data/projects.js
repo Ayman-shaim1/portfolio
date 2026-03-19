@@ -36,4 +36,18 @@ export const projects = [
     isPrivate: false,
     video: null,
   },
+  {
+    id: 4,
+    title: "Miniwireshark",
+    description:
+      "A web application that allows users to analyze network traffic using Wireshark.",
+    tags: ["React", "Tailwind CSS", "Java", "Spring Boot"],
+    // liveUrl: "https://inwireshark.vercel.app/",
+    githubBackendUrl:
+      "https://github.com/Ayman-shaim1/spring-boot-miniwireshark",
+    githubFrontendUrl: "https://github.com/Ayman-shaim1/frontend-miniwireshark",
+    video:
+      "https://drive.google.com/file/d/1sh4Lx1_HNtLjLZSPQfBfFlRTdq_P27ic/view",
+    isPrivate: false,
+  },
 ];

@@ -32,11 +32,17 @@ export default function Projects() {
         <h2 className="mb-10 text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Projects
         </h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {projects.map((project) => (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+          {projects.map((project, index) => {
+            const isLast = index === projects.length - 1;
+            const isAloneOnRow =
+              isLast && projects.length % 3 === 1;
+            const areTwoOnRow =
+              isLast && projects.length % 3 === 2;
+            return (
             <Card
               key={project.id}
-              className="flex w-full min-w-80 max-w-md shrink-0 flex-col sm:w-96"
+              className={`flex flex-col ${isAloneOnRow ? "md:col-start-2" : ""} ${areTwoOnRow ? "md:col-start-1" : ""}`}
             >
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
@@ -117,7 +123,7 @@ export default function Projects() {
                     Live
                   </Button>
                 )}
-                {project.githubUrl && !project.isPrivate && (
+                {project.githubUrl && !project.githubFrontendUrl && !project.githubBackendUrl && !project.isPrivate && (
                   <Button
                     variant="outline"
                     size="sm"
@@ -132,6 +138,38 @@ export default function Projects() {
                     <Github className="mr-2 size-4" />
                     Code
                   </Button>
+                )}
+                {project.githubFrontendUrl && project.githubBackendUrl && !project.isPrivate && (
+                  <>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      render={
+                        <a
+                          href={project.githubFrontendUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        />
+                      }
+                    >
+                      <Github className="mr-2 size-4" />
+                      Code Frontend
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      render={
+                        <a
+                          href={project.githubBackendUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        />
+                      }
+                    >
+                      <Github className="mr-2 size-4" />
+                      Code Backend
+                    </Button>
+                  </>
                 )}
                 {project.playStoreLink && (
                   <Button
@@ -167,7 +205,8 @@ export default function Projects() {
                 )}
               </CardFooter>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>
