@@ -14,6 +14,20 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Miniwireshark",
+    description:
+      "A web application that allows users to analyze network traffic using Wireshark.",
+    tags: ["React", "Tailwind CSS", "Java", "Spring Boot"],
+    // liveUrl: "https://inwireshark.vercel.app/",
+    githubBackendUrl:
+      "https://github.com/Ayman-shaim1/spring-boot-miniwireshark",
+    githubFrontendUrl: "https://github.com/Ayman-shaim1/frontend-miniwireshark",
+    video:
+      "https://drive.google.com/file/d/1sh4Lx1_HNtLjLZSPQfBfFlRTdq_P27ic/view",
+    isPrivate: false,
+  },
+  {
+    id: 3,
     title: "e-bricole",
     description:
       "A mobile application that allows users to book a craftsman to provide in-home services.",
@@ -26,8 +40,9 @@ export const projects = [
     // playStoreLink: "https://play.google.com/store/apps",
     // appStoreLink: "https://apps.apple.com/app",
   },
+
   {
-    id: 3,
+    id: 4,
     title: "Quiz",
     description: "A quiz application designed to help prepare for interviews.",
     tags: ["React", "Tailwind CSS"],
@@ -35,19 +50,5 @@ export const projects = [
     githubUrl: "https://github.com/Ayman-shaim1/quiz",
     isPrivate: false,
     video: null,
-  },
-  {
-    id: 4,
-    title: "Miniwireshark",
-    description:
-      "A web application that allows users to analyze network traffic using Wireshark.",
-    tags: ["React", "Tailwind CSS", "Java", "Spring Boot"],
-    // liveUrl: "https://inwireshark.vercel.app/",
-    githubBackendUrl:
-      "https://github.com/Ayman-shaim1/spring-boot-miniwireshark",
-    githubFrontendUrl: "https://github.com/Ayman-shaim1/frontend-miniwireshark",
-    video:
-      "https://drive.google.com/file/d/1sh4Lx1_HNtLjLZSPQfBfFlRTdq_P27ic/view",
-    isPrivate: false,
   },
 ];

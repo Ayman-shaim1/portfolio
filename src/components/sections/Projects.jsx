@@ -8,6 +8,13 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { projects } from "@/data/projects";
 import { ExternalLink, Github, Play } from "lucide-react";
@@ -28,28 +35,27 @@ function isExternalVideoLink(project) {
 export default function Projects() {
   return (
     <SectionWrapper>
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="mb-10 text-center text-3xl font-bold tracking-tight sm:text-4xl">
+      <div className="mx-auto max-w-7xl px-8 py-28 sm:px-10">
+        <h2 className="mb-14 text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Projects
         </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {projects.map((project, index) => {
-            const isLast = index === projects.length - 1;
-            const isAloneOnRow =
-              isLast && projects.length % 3 === 1;
-            const areTwoOnRow =
-              isLast && projects.length % 3 === 2;
-            return (
-            <Card
-              key={project.id}
-              className={`flex flex-col ${isAloneOnRow ? "md:col-start-2" : ""} ${areTwoOnRow ? "md:col-start-1" : ""}`}
-            >
-              <CardHeader>
+        <Carousel
+          opts={{ align: "start", loop: true }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-6 p-4">
+            {projects.map((project) => (
+              <CarouselItem
+                key={project.id}
+                className="basis-full  md:basis-1/2 lg:basis-1/3"
+              >
+                <Card className="flex h-full flex-col overflow-hidden pt-5 px-3 pb-0">
+              <CardHeader className="">
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-1">
-                <div className="flex flex-wrap gap-2">
+              <CardContent className="flex-1">  
+                <div className="flex flex-wrap">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -60,7 +66,7 @@ export default function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="flex-wrap gap-2">
+              <CardFooter className="-mx-5 mt-auto flex-wrap gap-2 px-5 pb-5 pt-4">
                 {project.video &&
                   (isEmbeddableVideo(project) ? (
                     <Dialog>
@@ -104,7 +110,7 @@ export default function Projects() {
                       }
                     >
                       <Play className="mr-2 size-4" />
-                      Watch demo
+                      Demo
                     </Button>
                   ) : null)}
                 {project.liveUrl && (
@@ -153,7 +159,7 @@ export default function Projects() {
                       }
                     >
                       <Github className="mr-2 size-4" />
-                      Code Frontend
+                       Frontend
                     </Button>
                     <Button
                       variant="outline"
@@ -167,7 +173,7 @@ export default function Projects() {
                       }
                     >
                       <Github className="mr-2 size-4" />
-                      Code Backend
+                       Backend
                     </Button>
                   </>
                 )}
@@ -204,10 +210,13 @@ export default function Projects() {
                   </Button>
                 )}
               </CardFooter>
-            </Card>
-            );
-          })}
-        </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </SectionWrapper>
   );
