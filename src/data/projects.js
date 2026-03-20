@@ -17,7 +17,7 @@ export const projects = [
     title: "Miniwireshark",
     description:
       "A web application that allows users to analyze network traffic using Wireshark.",
-    tags: ["React", "Tailwind CSS", "Java", "Spring Boot"],
+    tags: ["React", "Java", "Spring Boot"],
     // liveUrl: "https://inwireshark.vercel.app/",
     githubBackendUrl:
       "https://github.com/Ayman-shaim1/spring-boot-miniwireshark",
@@ -36,13 +36,26 @@ export const projects = [
     githubUrl: "https://github.com/Ayman-shaim1/e-bricole",
     isPrivate: false,
     video:
-      "https://drive.google.com/file/d/1AOmLvvHcnU5xjR582FnrgU9c7UZ5iDMM/view",
+      "https://drive.google.com/file/d/1AOmLvvHcnU5xjR582FnrgU9c7UZ5iDMM/view", 
     // playStoreLink: "https://play.google.com/store/apps",
     // appStoreLink: "https://apps.apple.com/app",
   },
-
   {
     id: 4,
+    title: "TermiX",
+    description:
+      "Browser SSH client with React + xterm.js and Spring Boot. Run remote commands in your browser.",
+    tags: ["React", "Java", "Spring Boot", "xterm.js"],
+    // liveUrl: "https://inwireshark.vercel.app/",
+    githubBackendUrl:
+      "https://github.com/Ayman-shaim1/spring-boot-termix",
+    githubFrontendUrl: "https://github.com/Ayman-shaim1/react-termix",
+    video:
+      "https://drive.google.com/file/d/1SsE-WATtcADi08vxSCWRS00fGC1v4_U_/view",
+    isPrivate: false,
+  },
+  {
+    id: 5,
     title: "Quiz",
     description: "A quiz application designed to help prepare for interviews.",
     tags: ["React", "Tailwind CSS"],

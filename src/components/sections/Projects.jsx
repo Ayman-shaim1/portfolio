@@ -8,13 +8,6 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { projects } from "@/data/projects";
 import { ExternalLink, Github, Play } from "lucide-react";
@@ -39,16 +32,9 @@ export default function Projects() {
         <h2 className="mb-14 text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Projects
         </h2>
-        <Carousel
-          opts={{ align: "start", loop: true }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-6 p-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
-              <CarouselItem
-                key={project.id}
-                className="basis-full  md:basis-1/2 lg:basis-1/3"
-              >
+              <div key={project.id} className="h-full">
                 <Card className="flex h-full flex-col overflow-hidden pt-5 px-3 pb-0">
               <CardHeader className="">
                 <CardTitle>{project.title}</CardTitle>
@@ -66,7 +52,7 @@ export default function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="-mx-5 mt-auto flex-wrap gap-2 px-5 pb-5 pt-4">
+              <CardFooter className="-mx-3 mt-auto flex-wrap gap-2 px-3 pb-5 pt-4">
                 {project.video &&
                   (isEmbeddableVideo(project) ? (
                     <Dialog>
@@ -211,12 +197,9 @@ export default function Projects() {
                 )}
               </CardFooter>
                 </Card>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        </div>
       </div>
     </SectionWrapper>
   );
