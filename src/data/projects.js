@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Website for a coach, Mister Ayoub, featuring a portfolio, e-books, and client tracking.",
     tags: ["React", "Appwrite", "Chakra UI"],
-    liveUrl: "https://aj-performance.appwrite.network/",
+    liveUrl: "https://ajperf.com",
     // githubUrl: "#",
     isPrivate: true,
     video: null,
