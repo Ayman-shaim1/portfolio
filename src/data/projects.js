@@ -36,7 +36,7 @@ export const projects = [
     githubUrl: "https://github.com/Ayman-shaim1/e-bricole",
     isPrivate: false,
     video:
-      "https://drive.google.com/file/d/1AOmLvvHcnU5xjR582FnrgU9c7UZ5iDMM/view", 
+      "https://drive.google.com/file/d/1AOmLvvHcnU5xjR582FnrgU9c7UZ5iDMM/view",
     // playStoreLink: "https://play.google.com/store/apps",
     // appStoreLink: "https://apps.apple.com/app",
   },
@@ -47,15 +47,24 @@ export const projects = [
       "Browser SSH client with React + xterm.js and Spring Boot. Run remote commands in your browser.",
     tags: ["React", "Java", "Spring Boot", "xterm.js"],
     // liveUrl: "https://inwireshark.vercel.app/",
-    githubBackendUrl:
-      "https://github.com/Ayman-shaim1/spring-boot-termix",
-    githubFrontendUrl: "https://github.com/Ayman-shaim1/react-termix",
+    githubUrl: "https://github.com/Ayman-shaim1/termichat",
     video:
       "https://drive.google.com/file/d/1SsE-WATtcADi08vxSCWRS00fGC1v4_U_/view",
     isPrivate: false,
   },
   {
     id: 5,
+    title: "TermiChat",
+    description:
+      "Terminal chat app with a TCP server (rooms, auth, private messages) and a blessed-based CLI client, using newline-delimited JSON over TCP.",
+    tags: ["Node.js", "javascript"],
+    githubUrl: "https://github.com/Ayman-shaim1/termichat",
+    video:
+      "https://drive.google.com/file/d/16XeNSKJXETdytSc4zrntux90fU-fsL_Z/view?usp=sharing",
+    isPrivate: false,
+  },
+  {
+    id: 6,
     title: "Quiz",
     description: "A quiz application designed to help prepare for interviews.",
     tags: ["React", "Tailwind CSS"],
