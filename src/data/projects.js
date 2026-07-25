@@ -56,7 +56,7 @@ export const projects = [
     id: 5,
     title: "TermiChat",
     description:
-      "Terminal chat app with a TCP server (rooms, auth, private messages) and a blessed-based CLI client, using newline-delimited JSON over TCP.",
+      "A terminal chat app with a Node.js TCP server (rooms, private messages, login auth) and a blessed CLI client.",
     tags: ["Node.js", "javascript"],
     githubUrl: "https://github.com/Ayman-shaim1/termichat",
     video:
