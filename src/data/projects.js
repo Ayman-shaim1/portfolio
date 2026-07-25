@@ -1,3 +1,5 @@
+import termiChatGuide from "@/assets/docs/TermiChat-User-Guide.pdf";
+
 export const projects = [
   {
     id: 1,
@@ -61,6 +63,7 @@ export const projects = [
     githubUrl: "https://github.com/Ayman-shaim1/termichat",
     video:
       "https://drive.google.com/file/d/16XeNSKJXETdytSc4zrntux90fU-fsL_Z/view?usp=sharing",
+    guideUrl: termiChatGuide,
     isPrivate: false,
   },
   {

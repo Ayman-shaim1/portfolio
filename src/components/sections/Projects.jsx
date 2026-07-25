@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { projects } from "@/data/projects";
-import { ExternalLink, Github, Play } from "lucide-react";
+import { ExternalLink, FileText, Github, Play } from "lucide-react";
 import { SiGoogleplay, SiAppstore } from "react-icons/si";
 
 const videoMap = {};
@@ -162,6 +162,22 @@ export default function Projects() {
                        Backend
                     </Button>
                   </>
+                )}
+                {project.guideUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    render={
+                      <a
+                        href={project.guideUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    }
+                  >
+                    <FileText className="mr-2 size-4" />
+                    User Guide
+                  </Button>
                 )}
                 {project.playStoreLink && (
                   <Button
